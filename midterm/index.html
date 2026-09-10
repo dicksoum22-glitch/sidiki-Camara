@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palestine Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="header-inner">
+
+      <!-- SVG logo: at least two SVG elements + accessible label -->
+      <a href="#top" class="logo-link" aria-label="Palestine Explorer, back to top">
+        <svg class="logo" width="48" height="48" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
+          <title id="logoTitle">Palestine Explorer logo</title>
+          <circle cx="24" cy="24" r="22" fill="var(--color-olive)"></circle>
+          <path d="M24 10 L34 38 L24 31 L14 38 Z" fill="var(--color-sand)"></path>
+          <text x="24" y="45" text-anchor="middle" font-size="6" fill="var(--color-ink)">Explorer</text>
+        </svg>
+        <span class="logo-text">Palestine Explorer</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#top">Top</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#governorates">Palestinian Governorates</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#bottom">Bottom</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section id="introduction" class="intro">
+      <h1>Discover the Land of Palestine</h1>
+      <p>
+        Palestine is a region rich in history, culture, and heritage, home to
+        ancient cities, olive groves, and communities whose traditions stretch
+        back thousands of years. From the hills of the West Bank to the
+        Mediterranean coast of Gaza, each governorate holds its own stories,
+        landmarks, and ways of life. Explore the governorates below to learn
+        more about this land.
+      </p>
+      <a href="#governorates" class="cta-button">Explore the Governorates</a>
+    </section>
+
+    <section id="governorates" class="governorates">
+      <h2>Palestinian Governorates</h2>
+
+      <div class="card-grid">
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1541417904950-b855846fe1ab?w=600&auto=format&fit=crop&q=60" alt="The Old City walls of Jerusalem (Al-Quds) at sunset">
+          <h3>Al-Quds (Jerusalem)</h3>
+          <p>A city sacred to three faiths, known for its Old City, ancient walls, and centuries of layered history.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1590123153697-2ec4baf1b8a5?w=600&auto=format&fit=crop&q=60" alt="Stone streets in the old town of Hebron (Al-Khaleel)">
+          <h3>Al-Khaleel (Hebron)</h3>
+          <p>Known for its old town, glass and pottery workshops, and the historic Ibrahimi Mosque.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1544986581-efac024faf62?w=600&auto=format&fit=crop&q=60" alt="Old port area of Jaffa (Yafa) by the Mediterranean Sea">
+          <h3>Yafa (Jaffa)</h3>
+          <p>A historic Mediterranean port city known for its old town, orange groves, and coastal views.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1568454537842-d933259bb258?w=600&auto=format&fit=crop&q=60" alt="Agricultural fields near Khan Younis in the southern Gaza Strip">
+          <h3>Khan Younis</h3>
+          <p>A southern Gaza Strip governorate known for its agricultural land and local markets.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&auto=format&fit=crop&q=60" alt="Coastal view near Rafah at the southern edge of the Gaza Strip">
+          <h3>Rafah</h3>
+          <p>Located at the southern tip of the Gaza Strip, bordering Egypt, with a long coastal strip.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1600661653561-629509216228?w=600&auto=format&fit=crop&q=60" alt="Coastline of Gaza City along the Mediterranean Sea">
+          <h3>Gaza</h3>
+          <p>The largest city in the Gaza Strip, situated on the Mediterranean coast with a long urban history.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+
+      <form action="#" method="post" novalidate>
+
+        <div class="form-row">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required minlength="2" placeholder="Your full name">
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required placeholder="Reason for contacting us">
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+224 627 738 111">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@sdk\.sc\.th$" placeholder="yourname@Sidiki.ac.th" title="Must be a valid @sdk.sc.th address">
+        </div>
+
+        <div class="form-row">
+          <label for="secretWord">Secret word</label>
+          <input type="password" id="secretWord" name="secretWord" required minlength="8"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$"
+            title="At least 8 characters, including an uppercase letter, a lowercase letter, a number, and a special character"
+            placeholder="At least 8 characters">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Write your message here"></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Send Message</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="bottom">
+    <p>&copy; 2026 Palestine Explorer. All rights reserved.</p>
+    <p>Student: Sidiki Camara</p>
+    <a href="#top" class="back-to-top">Back to Top</a>
+  </footer>
+
+</body>
+</html>
